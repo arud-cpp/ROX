@@ -40,6 +40,19 @@ void LEDArray(CRGB color, int brightness) {
   FastLED.show();
 }
 
+//プロトタイプ宣言
+void connect_dualsense(bool);
+void display_motor_speeds(bool);
+void handle_dualsense_controller();
+void check_buttons();
+void motor_stop();
+void vehicle_steer(int, int);
+void vehicle_omni(int, int, int, int);
+void motor_brake();
+bool confirm_change_mac();
+String input_mac_address();
+//
+
 void setup() {
   FastLED.addLeds<WS2811, LED_DATA_PIN, GRB>(leds, NUM_LEDS);
   LEDArray(CRGB::White, 20);
